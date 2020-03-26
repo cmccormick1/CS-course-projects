@@ -1,7 +1,7 @@
 /*
  *  
  *AUTHOR: Caroline McCormick
- *FILE: Patient_Class.java 
+ *FILE: Patient.java 
  *ASSIGNMENT: Programming Assignment 9 - PatientQueue  
  *COURSE: CSC 210; Fall 2019 
  *PURPOSE: This class implements a Patient object with name and priority 
