@@ -4,7 +4,9 @@
     Course: CSC 120, Section 1A
     Purpose: This program takes a file that contains pairs of friends and
     organizes those pairs in such a way that given two names by the user, the
-    program will tell if those people have any mutual friends.
+    program will tell if those people have any mutual friends. This program
+    uses an external class that implements a linked list to store the friend
+    relationships.
 """
 
 from linked_list import *
@@ -20,7 +22,7 @@ def main():
     
 def organize_data(fname):
     """
-    This function reads in the friends file and creates a main linked list of
+    Purpose: This function reads in the friends file and creates a main linked list of
     every person in the file and subsequent linked lists off each person containing
     their friends.
 
@@ -28,11 +30,6 @@ def organize_data(fname):
 
     Returns: llist is the main linked list that contains each person in the file
     once.
-
-    Pre-condition: The friends file must be a valid file type in the valid format.
-  
-    Post-condition: A LinkedList object will be created containing all the people
-    in the file grouped with their friends.
     """
     llist = LinkedList()
     try:
@@ -49,26 +46,23 @@ def organize_data(fname):
 
 def mutual_friends(llist, name1, name2):
     """
-    This method loops through each of the given people's friends lists and
+    Purpose: This method loops through each of the given people's friend lists and
     prints out any mutual friends, if they have any.
 
     Parameters: name1 and name2 are the two names given by the user.
 
     Returns: None
-
-    Pre-condition: Each name given by the user must be a valid name (i.e. it
-    must be in the main linked list).
-      
-    Post-condition: All of the mutual friends between the two people will be
-    printed out.
     """
     name1_friends, name2_friends = llist.get_friend_llists(name1, name2)
+    #Program prints error message and exits if either name1 or name2 is not contained in llist
     if name1_friends._head == None:
         print('ERROR: Unknown person ' + name1)
         sys.exit(1)
     elif name2_friends._head == None:
         print('ERROR: Unknown person ' + name2)
         sys.exit(1)
+    
+    #While both people's friend lists are not empty, check if they have friends in common
     flag = False
     current1 = name1_friends._head
     while current1 != None:
@@ -81,5 +75,4 @@ def mutual_friends(llist, name1, name2):
                 flag = True
             current2 = current2._next
         current1 = current1._next
-
-main()
+        
