@@ -2,7 +2,7 @@
 /*
  *  
  *AUTHOR: Caroline McCormick
- *FILE: Job_Skills_Main.java 
+ *FILE: PA2Main.java 
  *ASSIGNMENT: Programming Assignment 2 - Job Skills  
  *COURSE: CSC 210; Fall 2019 
  *PURPOSE: This program reads in a file containing information about various jobs, and it takes
@@ -50,15 +50,14 @@ public class PA2Main {
 
     /*
      * Purpose: This method reads the input job file and creates a map of job
-     * categories (strings)
-     * mapped to a map of locations (strings) mapped to the number of open
-     * positions at a location
-     * (integers).
+     * categories (strings) mapped to a map of locations (strings) mapped to 
+     * the number of open positions at a location (integers).
      * 
      * @param jobFileName, is the file name that contains all of the job data.
      * 
-     * @return jobDataMap, is a map of categories to a map of locations to the
-     * number of open positions at each location.
+     * @return jobDataMap, is a map where the keys are categories and the values
+     * are maps. The inner maps have keys of locations and values of the number 
+     * of open positions at each location.
      */
     public static Map<String, Map<String, Integer>> createJobMap(
             String jobFileName) {
@@ -103,12 +102,12 @@ public class PA2Main {
 
     /*
      * Purpose: This method handles the case in which the command CATCOUNT is
-     * given. It prints
-     * out all the categories in alphabetical order along with the number of
-     * jobs in each category.
+     * given. It prints out all the categories in alphabetical order along with
+     * the number of jobs in each category.
      * 
-     * @param jobDataMap, is a map of categories to a map of locations to the
-     * number of open positions at each location.
+     * @param jobDataMap, is a map where the keys are categories and the values
+     * are maps. The inner maps have keys of locations and values of the number 
+     * of open positions at each location.
      * 
      * @return nothing; Prints out categories and number of jobs in each
      * category.
@@ -135,13 +134,12 @@ public class PA2Main {
 
     /*
      * Purpose: This method handles the case in which the command LOCATIONS is
-     * given. For a given
-     * category, it prints out all the locations in alphabetical order along
-     * with the number of
-     * positions open in each category.
+     * given. For a given category, it prints out all the locations in alphabetical
+     * order along with the number of positions open in each category.
      * 
-     * @param jobDataMap, is a map of categories to a map of locations to the
-     * number of open positions at each location.
+     * @param jobDataMap, is a map where the keys are categories and the values
+     * are maps. The inner maps have keys of locations and values of the number 
+     * of open positions at each location.
      * 
      * @param category, is the category which the user wants all the location
      * data.
