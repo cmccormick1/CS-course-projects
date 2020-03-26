@@ -3,4 +3,4 @@
 
 This repository contains projects from my past Computer Science courses. It is broken into two sections: programs written in Java and programs written in Python.
 
-Included in each section are one non-object-oriented program, one object-oriented program, and readmes explaining the nature of the program (i.e. the motivation/purpose, executing instructions, etc.).
+Included in each section are one non-object-oriented program, one object-oriented program, and readmes explaining the nature of the project (i.e. the motivation/purpose, executing instructions, etc.).
