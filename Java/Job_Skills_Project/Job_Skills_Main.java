@@ -2,7 +2,7 @@
 /*
  *  
  *AUTHOR: Caroline McCormick
- *FILE: PA2Main.java 
+ *FILE: Job_Skills_Main.java 
  *ASSIGNMENT: Programming Assignment 2 - Job Skills  
  *COURSE: CSC 210; Fall 2019 
  *PURPOSE: This program reads in a file containing information about various jobs, and it takes
