@@ -5,7 +5,9 @@
  *ASSIGNMENT: Programming Assignment 9 - PatientQueue  
  *COURSE: CSC 210; Fall 2019 
  *PURPOSE: This class implements a priority queue of Patient objects using a binary
- *minimum heap.
+ *minimum heap. A priority queue is a queue that is ordered by the priority assigned
+ *to each Patient. The lowest number (highest priority) is at the front of the
+ *queue.
  * 
  */
 
@@ -18,7 +20,8 @@ public class PatientQueue {
 
     /*
      * Purpose: This method constructs a new instance of PatientQueue by
-     * creating a priority queue with an initial capacity.
+     * creating a priority queue with an initial capacity that is the 
+     * default capacity.
      * 
      * @param None
      * 
@@ -48,8 +51,10 @@ public class PatientQueue {
     }
 
     /*
-     * Purpose: This method bubbles a Patient up to the front of the priority
-     * queue until their priority is no longer more urgent than their parent's.
+     * Purpose: This method bubbles a Patient up (i.e. moves the Patient) to the
+     * front of the priority queue until their priority is no longer more urgent
+     * than their parent's (the parent of a Patient is the Patient at position i/2
+     * in the underlying array where i is the index of the Patient being moved).
      * 
      * @param index, the index in the underlying array that the Patient to be
      * bubbled up is at.
@@ -71,8 +76,11 @@ public class PatientQueue {
     }
 
     /*
-     * Purpose: This method bubbles a Patient down to the back of the priority
-     * queue until their priority is no longer less urgent than their child's.
+     * Purpose: This method bubbles a Patient down (i.e. moves the Patient) to 
+     * the back of the priority queue until their priority is no longer less 
+     * urgent than their child's (a Patient has two children, one at i*2 and 
+     * one at i*2 + 1 where i is the index in the underlying array of the Patient
+     * being moved).
      * 
      * @param index, the index in the underlying array that the Patient to be
      * bubbled down is at.
@@ -118,12 +126,12 @@ public class PatientQueue {
 
     /*
      * Purpose: This method indicates the priority order of two patients, i.e.
-     * if one patient's priority is more urgent than the other, or if they have
+     * if one Patient's priority is more urgent than the other, or if they have
      * the same priority, which name should go first.
      * 
-     * @param patient1, the first patient to compare.
+     * @param patient1, the first Patient to compare.
      * 
-     * @param patient2, the second patient to compare.
+     * @param patient2, the second Patient to compare.
      * 
      * @return -1, if patient1 is more urgent than patient2.
      * 
@@ -145,11 +153,11 @@ public class PatientQueue {
 
     /*
      * Purpose: Given a name and a priority, this method adds a Patient to the
-     * priority queue while keeping the correct priority order.
+     * priority queue while maintaining the correct priority order.
      * 
-     * @param name, the name of the patient.
+     * @param name, the name of the Patient.
      * 
-     * @param priority, the priority of the patient.
+     * @param priority, the priority of the Patient.
      * 
      * @return None
      */
@@ -165,7 +173,7 @@ public class PatientQueue {
 
     /*
      * Purpose: Given a Patient object, this method adds a Patient to the
-     * priority queue while keeping the correct priority order.
+     * priority queue while maintaining the correct priority order.
      * 
      * @param patient, the patient to be added.
      * 
@@ -186,7 +194,7 @@ public class PatientQueue {
      * 
      * @param None
      * 
-     * @return frontPatient, the name of the patient as a string.
+     * @return frontPatient, the name of the Patient as a string.
      */
     public String dequeue() throws Exception {
         if (isEmpty()) {
@@ -201,7 +209,7 @@ public class PatientQueue {
     }
 
     /*
-     * Purpose: This method returns the most urgent patient's name without
+     * Purpose: This method returns the most urgent Patient's name without
      * removing them from the queue. It throws an exception if the queue is
      * empty.
      * 
@@ -217,13 +225,13 @@ public class PatientQueue {
     }
 
     /*
-     * Purpose: This method returns the most urgent patient's priority without
+     * Purpose: This method returns the most urgent Patient's priority without
      * removing them from the queue. It throws an exception if the queue is
      * empty.
      * 
      * @param None
      * 
-     * @return array[1].priority, the priority of the patient.
+     * @return array[1].priority, the priority of the Patient.
      */
     public int peekPriority() throws Exception {
         if (isEmpty()) {
@@ -233,13 +241,13 @@ public class PatientQueue {
     }
 
     /*
-     * Purpose: Given a patient name and new priority, this method finds the
-     * patient in the queue, if they're in it, and changes their priority while
+     * Purpose: Given a Patient name and new priority, this method finds the
+     * Patient in the queue, if they're in it, and changes their priority while
      * maintaining the priority queue order.
      * 
-     * @param name, the name of the patient to have their priority changed.
+     * @param name, the name of the Patient to have their priority changed.
      * 
-     * @param newPriority, the new priority that the patient will now have.
+     * @param newPriority, the new priority that the Patient will now have.
      * 
      * @return None
      */
