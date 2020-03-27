@@ -18,6 +18,8 @@
 
 """
 
+import sys
+
 def main():
     poke_dict, num_of_stats = create_dataset()
     average_dict = calculate_averages(poke_dict, num_of_stats)
@@ -36,7 +38,11 @@ def create_dataset():
     each type, then all of the statistics in a list for each Pokemon.
     len(stats_list) is the number of statistics that the Pokemon have.
     """
-    data_file = open(input()).readlines()
+    try:
+        data_file = open(input('Input File: ')).readlines()
+    except:
+        print('ERROR: Could not open file ' + data_file)
+        sys.exit(1)
     poke_dict = {}
     for line in data_file:
         data = line.split(',')
