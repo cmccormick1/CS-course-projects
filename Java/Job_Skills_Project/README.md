@@ -1,4 +1,5 @@
-#Job Skills Project
+Job Skills Project
+------------------
 
 This project displays the use and manipulation of a dictionary, an abstract data structure that is implemented by a HashMap here. This project also displays reading in a data file, specifically a file containing job information, and organizing the information contained in the data file. It will read in a job data file and print out information about the different jobs in the file depending on what command is provided by the user.
 
