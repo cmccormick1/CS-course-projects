@@ -2,7 +2,7 @@ Mutual Friends Project
 -----------------------
 
 **Purpose:**  
-This project implements an abstract data structure called a linked list, which stores node objects containing information about the person it represents as well as pointers to the next node in the main list and to the list of that person's friends. This linked list of nodes is then traversed to determine friend relationships between people. If a name appears in two different people's friend lists, then they are said to have a mutual friend. The program will prompt the user to provide an input friend file and two names. If any exist, the program will print out any mutual friend between those two provided people.
+This project implements a linked list, which stores node objects containing information about the person it represents as well as pointers to the next node in the main list and to the list of that person's friends. This linked list of nodes is then traversed to determine friend relationships between people. If a name appears in two different people's friend lists, then they are said to have a mutual friend. The program will prompt the user to provide an input friend file and two names. If any exist, the program will print out any mutual friend between those two provided people.
 
 **Input File Structure:**  
   * The friend file given contains two names per line separated by a space, and this indicates that those two people are friends.  
