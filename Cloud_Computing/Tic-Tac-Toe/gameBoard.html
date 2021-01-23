@@ -1,0 +1,79 @@
+<html>
+<head><title>Tic-Tac-Toe</title></head>
+<body>
+<center>
+
+<p><font size="+3"><b>Tic-Tac-Toe!</b></font>
+
+{% if winner != "" %}
+<p><font size="+1.5">{{winner}} won! <a href="{{url_for('startGame')}}">Back to game menu</a></font>
+{% elif turn == "tie" %}
+<p><font size="+1.5">It's a tie! <a href="{{url_for('startGame')}}">Back to game menu</a></font>
+{% else %}
+<p><font size="+1.5">{{turn}}'s turn</font>
+{% endif %}
+
+<br><form action="{{url_for('gameBoard')}}" method="post">
+<input type=hidden name=gameID value={{gameID}}>
+<table border=1 style="height:400px; width:400px; text-align:center;">
+<tr>
+	<td><p style="font-size:50px">{{arr[0][0]}}</p>
+		{% if arr[0][0] == " " and winner == "" %} 
+		<input type="submit" name="loc00" value="Select Space">
+		{% endif %}
+	</td>
+	<td><p style="font-size:50px">{{arr[0][1]}}</p>
+		{% if arr[0][1] == " " and winner == "" %} 
+		<input type="submit" name="loc01" value="Select Space">
+		{% endif %}
+	</td>
+	<td><p style="font-size:50px">{{arr[0][2]}}</p>
+		{% if arr[0][2] == " " and winner == "" %}
+		<input type="submit" name="loc02" value="Select Space">
+		{% endif %}
+	</td>
+</tr>
+<tr>
+	<td><p style="font-size:50px">{{arr[1][0]}}</p> 
+		{% if arr[1][0] == " " and winner == "" %}
+		<input type="submit" name="loc10" value="Select Space">
+		{% endif %}
+	</td>
+	<td><p style="font-size:50px">{{arr[1][1]}}</p>
+		{% if arr[1][1] == " " and winner == "" %} 
+		<input type="submit" name="loc11" value="Select Space">
+		{% endif %}
+	</td>
+	<td><p style="font-size:50px">{{arr[1][2]}}</p>
+		{% if arr[1][2] == " " and winner == "" %} 
+		<input type="submit" name="loc12" value="Select Space">
+		{% endif %}
+	</td>
+</tr>
+<tr>
+	<td><p style="font-size:50px">{{arr[2][0]}}</p>
+		{% if arr[2][0] == " " and winner == "" %} 
+		<input type="submit" name="loc20" value="Select Space">
+		{% endif %}
+	</td>
+	<td><p style="font-size:50px">{{arr[2][1]}}</p>
+		{% if arr[2][1] == " " and winner == "" %} 
+		<input type="submit" name="loc21" value="Select Space">
+		{% endif %}
+	</td>
+	<td><p style="font-size:50px">{{arr[2][2]}}</p>
+		{% if arr[2][2] == " " and winner == "" %} 
+		<input type="submit" name="loc22" value="Select Space">
+		{% endif %}
+	</td>
+</tr>
+</table>
+</form>
+
+<p><a href="{{url_for('startGame')}}">Back to game menu</a>
+
+<p><a href="{{url_for('logout')}}">Logout</a>
+
+</center>
+</body>
+</html>
