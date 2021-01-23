@@ -10,6 +10,4 @@ Cloud computing projects readme.....
          in which the file you want to serve resides.
 
 **Usage:** python3 server.py port dir_path\
-    e.g.:
-     * port --> 8080\
-     * dir_path --> ../Cloud_Computing/Second_Website/
+    e.g.: python3 server.py 8080 ./Second_Website/
