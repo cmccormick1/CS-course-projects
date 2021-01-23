@@ -18,6 +18,12 @@
    * templates/gameBoard.html --> the page that shows the current state of the game board, shows which
    player's turn it is, and shows who won (or if the players tied).
    * proj07_tables.pdf --> a document explaining the database design and what is included in each table.
+   * Visual/login_page.PNG --> what the login page to the website looks like.
+   * Visual/create_game_page.PNG --> what the main page-where you can create a new or select an existing
+   game-looks like.
+   * Visual/start_game_page.PNG --> what the Tic-Tac-Toe board looks like at the start of the game.
+   * Visual/winner_page.PNG --> what the Tic-Tac-Toe board looks like when there is a winner.
+   * Visual/tie_page.PNG --> what the Tic-Tac-Toe board looks like when there is a tie.
    
 **URL to Login Page:**
    * http://3.89.159.48/flask_proj07/
