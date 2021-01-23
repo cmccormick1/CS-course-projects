@@ -5,7 +5,7 @@
 **Purpose:** For this project, I created a website for a pie shop (Caroline's Pies) which keeps\
          track of products they sell and orders that have been made. The website allows the\
          user to view all of the products the shop offers, view all of the orders that have\
-         been made, add products to the database, add orders to the database, and search\
+         been made, add products to the SQL database, add orders to the SQL database, and search\
          for orders based on the product ID number.
          
 **Files:**
