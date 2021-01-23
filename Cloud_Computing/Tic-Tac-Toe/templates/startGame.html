@@ -1,0 +1,33 @@
+<html>
+<head><title>Tic-Tac-Toe</title></head>
+<body>
+<center>
+
+<p><font size="+3"><b>Tic-Tac-Toe!</b></font>
+
+<p>Welcome {{user}}!<br>
+
+<p><b>Existing games:</b>
+<table border=1>
+	<tr><th>ID</th><th>Versus</th><th></th></tr>
+	{% for key,value in rows.items() %}
+	<tr>
+		<td>{{key}}</td>
+		<td>{{value}}</td>
+		<td><a href="{{url_for('gameBoard')}}?gameID={{key}}">Join this game!</a></td>
+	</tr>
+	{% endfor %}
+</table><br>
+
+<p><b>Create a new game:</b>
+<form action='/flask_proj07/startGame' method='post'>
+	<label for='Opponent'>Opponent Username: </label>
+	<input type='text' name='Opponent' id='Opponent'><br>
+	<input type='submit' name='start' value='Create Game!'>
+</form>
+
+<p><a href="{{url_for('logout')}}">Logout</a>
+
+</center>
+</body>
+</html>
